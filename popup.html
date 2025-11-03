@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 400px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .btn {
+            background: #4a76a8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 10px 0;
+            width: 100%;
+        }
+        .btn:hover {
+            background: #3a6698;
+        }
+        .btn:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+        .token-area {
+            width: 100%;
+            height: 80px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+            resize: vertical;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #cce7ff;
+            color: #004085;
+            border: 1px solid #b3d7ff;
+        }
+        .log {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 10px;
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 11px;
+            text-align: left;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>🔑 VK Token Extractor</h3>
+        
+        <div id="status" class="status info">
+            Откройте VK.com и нажмите кнопку
+        </div>
+        
+        <button id="extractBtn" class="btn">🎯 Извлечь токен</button>
+        
+        <textarea id="tokenOutput" class="token-area" placeholder="Токен появится здесь..." readonly></textarea>
+        
+        <button id="copyBtn" class="btn" disabled>📋 Скопировать токен</button>
+        <button id="testBtn" class="btn" disabled>🧪 Проверить токен</button>
+        
+        <div class="log" id="log"></div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
